@@ -17,6 +17,8 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "@rollup/plugin-replace": "^2.3.4",
+    "@sanity/client": "^2.2.6",
     "sirv-cli": "^1.0.0"
   }
 }
