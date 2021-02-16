@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sean C Davis",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@sanity/cli": "^2.2.6"
+  }
 }

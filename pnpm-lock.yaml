@@ -1,0 +1,15 @@
+importers:
+  .:
+    dependencies:
+      '@sanity/cli': 2.2.6
+    specifiers:
+      '@sanity/cli': ^2.2.6
+lockfileVersion: 5.2
+packages:
+  /@sanity/cli/2.2.6:
+    dev: false
+    engines:
+      node: '>=10.0.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-MmxOAPRwiGxHwfQZLYHTFN4ZVSHueaRCnDln4WPE19PBjvrqjX4s1RNacv/Dm9lt5CEbCkJsjMZfzd0lLrMNTQ==
