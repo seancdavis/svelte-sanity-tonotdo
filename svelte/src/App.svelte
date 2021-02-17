@@ -3,6 +3,7 @@
   import { sanity } from "./utils/sanity-client";
 
   import InactionList from "./components/InactionList.svelte";
+  import InactionForm from "./components/InactionForm.svelte";
 
   let inactions = [];
 
@@ -19,6 +20,10 @@
   <hr />
 
   <InactionList {inactions} />
+
+  <hr />
+
+  <InactionForm />
 </main>
 
 <style>
