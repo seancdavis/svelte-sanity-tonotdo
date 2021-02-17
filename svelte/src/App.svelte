@@ -8,7 +8,7 @@
   let inactions = [];
 
   onMount(async () => {
-    const query = '*[_type == "inaction"]{ title, notes }';
+    const query = '*[_type == "inaction"]{ title, notes, priority }';
     inactions = await sanity.fetch(query);
   });
 </script>
