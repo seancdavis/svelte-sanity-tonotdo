@@ -1,11 +1,12 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
   import { sanity } from "./utils/sanity-client";
 
+  import type { Inaction } from "./components/Inaction";
   import InactionList from "./components/InactionList.svelte";
   import InactionForm from "./components/InactionForm.svelte";
 
-  let inactions = [];
+  let inactions: Inaction[] = [];
 
   onMount(async () => {
     const query = '*[_type == "inaction"]{ title, notes, priority }';

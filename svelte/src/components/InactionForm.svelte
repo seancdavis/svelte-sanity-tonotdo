@@ -1,8 +1,10 @@
 <script lang="ts">
   import { sanity } from "../utils/sanity-client";
 
+  import type { Inaction } from "./Inaction";
+
   async function handleSubmit(event) {
-    const inaction = {
+    const inaction: Inaction = {
       _type: "inaction",
       title: event.target.title.value,
       notes: event.target.notes.value,
