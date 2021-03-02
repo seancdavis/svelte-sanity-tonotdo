@@ -15,36 +15,28 @@
 </script>
 
 <main>
-  <h1>To Not Do</h1>
-  <p>Here is a list of things I am not going to do.</p>
-
-  <hr />
+  <h1 class="main-heading">To Not Do</h1>
+  <p class="intro">Here is a list of things I am not going to do.</p>
 
   <InactionList {inactions} />
-
-  <hr />
 
   <InactionForm />
 </main>
 
 <style>
   main {
-    text-align: center;
-    padding: 1em;
-    max-width: 240px;
+    max-width: 24rem;
     margin: 0 auto;
+    padding: 0 1rem;
   }
 
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
-  }
-
-  @media (min-width: 640px) {
+  @media (min-width: 26rem) {
     main {
-      max-width: none;
+      padding: 0;
     }
+  }
+
+  .intro {
+    color: var(--color-gray-500);
   }
 </style>
