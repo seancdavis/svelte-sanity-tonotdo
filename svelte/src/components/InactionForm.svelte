@@ -1,6 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
-  import { sanity } from "../utils/sanity-client";
+  import { sanity } from "../../utils/sanity-client";
 
   import type { Inaction } from "./Inaction";
 

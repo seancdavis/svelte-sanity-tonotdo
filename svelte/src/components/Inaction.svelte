@@ -2,7 +2,7 @@
   import { createEventDispatcher } from "svelte";
 
   import Cancel from "./Icons/Cancel.svelte";
-  import { sanity } from "../utils/sanity-client";
+  import { sanity } from "../../utils/sanity-client";
 
   export let _id, title, notes;
 

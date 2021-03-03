@@ -9,6 +9,7 @@
   "author": "Sean C Davis",
   "license": "MIT",
   "dependencies": {
-    "@sanity/cli": "^2.2.6"
+    "@sanity/cli": "^2.2.6",
+    "vercel": "^21.3.2"
   }
 }

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { sanity } from "./utils/sanity-client";
+  import { sanity } from "../utils/sanity-client";
 
   import type { Inaction } from "./components/Inaction";
   import InactionList from "./components/InactionList.svelte";
