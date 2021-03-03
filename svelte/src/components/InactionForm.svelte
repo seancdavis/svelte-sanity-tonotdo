@@ -1,18 +1,27 @@
 <script lang="ts">
+  import { createEventDispatcher } from "svelte";
   import { sanity } from "../utils/sanity-client";
 
   import type { Inaction } from "./Inaction";
 
+  const dispatch = createEventDispatcher();
+
   async function handleSubmit(event) {
+    dispatch("loading");
+
     const inaction: Inaction = {
       _type: "inaction",
       title: event.target.title.value,
       notes: event.target.notes.value,
     };
 
+    event.target.reset();
+
     await sanity.create(inaction);
 
-    // TODO: Update items.
+    dispatch("reloadInactions", {
+      action: "create",
+    });
   }
 </script>
 

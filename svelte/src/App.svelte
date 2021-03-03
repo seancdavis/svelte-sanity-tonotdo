@@ -8,17 +8,24 @@
 
   let inactions: Inaction[] = [];
 
-  onMount(async () => {
+  async function setLoading() {
+    inactions = [];
+  }
+
+  async function fetchInactions() {
+    inactions = [];
     const query = '*[_type == "inaction"]{ title, notes, priority }';
     inactions = await sanity.fetch(query);
-  });
+  }
+
+  onMount(fetchInactions);
 </script>
 
 <main>
   <h1 class="main-heading">To Not Do</h1>
   <p class="intro">Here is a list of things I am not going to do.</p>
 
-  <InactionForm />
+  <InactionForm on:reloadInactions={fetchInactions} on:loading={setLoading} />
 
   <InactionList {inactions} />
 </main>
