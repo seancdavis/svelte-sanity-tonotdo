@@ -18,9 +18,9 @@
   <h1 class="main-heading">To Not Do</h1>
   <p class="intro">Here is a list of things I am not going to do.</p>
 
-  <InactionList {inactions} />
-
   <InactionForm />
+
+  <InactionList {inactions} />
 </main>
 
 <style>

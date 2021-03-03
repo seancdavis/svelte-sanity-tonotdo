@@ -1,12 +1,9 @@
 <script>
-  export let title, notes, priority;
+  export let title, notes;
 </script>
 
 <div class="inaction">
   <h2 class="title">{title}</h2>
-  <!-- <p>
-    <strong>{priority}</strong>
-  </p> -->
   <div class="notes">{notes}</div>
 </div>
 

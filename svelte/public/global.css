@@ -1,12 +1,16 @@
 :root {
   --color-white: #fff;
 
+  --color-gray-100: #f5f6fb;
+  --color-gray-200: #eaeaea;
+  --color-gray-300: #ccd1d8;
   --color-gray-500: #828596;
   --color-gray-800: #323137;
 
   --color-purple-100: #f5f1ff;
   --color-purple-300: #c2a0ff;
   --color-purple-500: #6d56ca;
+  --color-purple-700: #584b9b;
 
   font-size: 16px;
   background-color: var(--color-white);
