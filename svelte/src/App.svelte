@@ -14,7 +14,7 @@
 
   async function fetchInactions() {
     inactions = [];
-    const query = '*[_type == "inaction"]{ title, notes, priority }';
+    const query = '*[_type == "inaction"]{ _id, title, notes, priority }';
     inactions = await sanity.fetch(query);
   }
 
@@ -27,7 +27,11 @@
 
   <InactionForm on:reloadInactions={fetchInactions} on:loading={setLoading} />
 
-  <InactionList {inactions} />
+  <InactionList
+    {inactions}
+    on:reloadInactions={fetchInactions}
+    on:loading={setLoading}
+  />
 </main>
 
 <style>

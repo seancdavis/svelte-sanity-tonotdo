@@ -1,8 +1,22 @@
 <script>
-  export let title, notes;
+  import { createEventDispatcher } from "svelte";
+
+  import Cancel from "./Icons/Cancel.svelte";
+  import { sanity } from "../utils/sanity-client";
+
+  export let _id, title, notes;
+
+  const dispatch = createEventDispatcher();
+
+  async function deleteInaction() {
+    dispatch("loading");
+    await sanity.delete(_id);
+    dispatch("reloadInactions");
+  }
 </script>
 
 <div class="inaction">
+  <button on:click={deleteInaction}><Cancel /></button>
   <h2 class="title">{title}</h2>
   <div class="notes">{notes}</div>
 </div>
@@ -15,6 +29,7 @@
     border-bottom-right-radius: 0.5rem;
     margin-bottom: 1rem;
     padding: 1rem 1.5rem;
+    position: relative;
   }
 
   .title {
@@ -26,5 +41,24 @@
 
   .notes {
     font-size: 0.85rem;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: var(--color-gray-300);
+    height: 1.25rem;
+    padding: 0;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    transition: color 0.25s ease;
+    width: 1.25rem;
+    z-index: 1;
+  }
+
+  button:hover {
+    cursor: pointer;
+    color: var(--color-purple-500);
   }
 </style>

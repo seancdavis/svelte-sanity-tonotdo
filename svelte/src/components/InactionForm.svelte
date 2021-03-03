@@ -19,9 +19,7 @@
 
     await sanity.create(inaction);
 
-    dispatch("reloadInactions", {
-      action: "create",
-    });
+    dispatch("reloadInactions");
   }
 </script>
 
