@@ -19,9 +19,9 @@
 <form on:submit|preventDefault={handleSubmit}>
   <h2>New Inaction</h2>
   <label for="new-item--title">Title</label>
-  <input type="text" name="title" id="new-item--title" />
+  <input type="text" name="title" id="new-item--title" required />
   <label for="new-item--notes">Notes</label>
-  <textarea rows="4" name="notes" id="new-item--notes" />
+  <textarea rows="4" name="notes" id="new-item--notes" required />
   <input type="submit" value="Submit" />
 </form>
 
