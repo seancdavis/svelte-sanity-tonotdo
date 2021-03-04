@@ -1,8 +1,8 @@
 <script>
+  import axios from "axios";
   import { createEventDispatcher } from "svelte";
 
   import Cancel from "./Icons/Cancel.svelte";
-  import { sanity } from "../../utils/sanity-client";
 
   export let _id, title, notes;
 
@@ -10,7 +10,9 @@
 
   async function deleteInaction() {
     dispatch("loading");
-    await sanity.delete(_id);
+
+    await axios.delete("/api/inactions", { data: { id: _id } });
+
     dispatch("reloadInactions");
   }
 </script>

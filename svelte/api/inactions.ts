@@ -1,6 +1,6 @@
-import { sanity } from "../utils/sanity-client";
+import type { SanityDocumentStub } from "@sanity/client";
 
-import { Inaction } from "../src/components/Inaction";
+import { sanity } from "../utils/sanity-client";
 
 const getInactions = async () => {
   const query = '*[_type == "inaction"]{ _id, title, notes, priority }';
@@ -8,7 +8,7 @@ const getInactions = async () => {
 };
 
 const createInaction = async ({ title, notes }) => {
-  const inaction: Inaction = { _type: "inaction", title, notes };
+  const inaction: SanityDocumentStub = { _type: "inaction", title, notes };
   return await sanity.create(inaction);
 };
 

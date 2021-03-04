@@ -1,7 +1,5 @@
-import type { SanityDocumentStub } from "@sanity/client";
-
-export interface Inaction extends SanityDocumentStub {
-  _type: string;
+export interface Inaction {
+  _type?: "inaction";
   _id?: string;
   title: string;
   notes: Text;

@@ -1,6 +1,6 @@
 <script lang="ts">
+  import axios from "axios";
   import { createEventDispatcher } from "svelte";
-  import { sanity } from "../../utils/sanity-client";
 
   import type { Inaction } from "./Inaction";
 
@@ -10,14 +10,13 @@
     dispatch("loading");
 
     const inaction: Inaction = {
-      _type: "inaction",
       title: event.target.title.value,
       notes: event.target.notes.value,
     };
 
     event.target.reset();
 
-    await sanity.create(inaction);
+    await axios.post("/api/inactions", inaction);
 
     dispatch("reloadInactions");
   }

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { sanity } from "../utils/sanity-client";
+  import axios from "axios";
 
   import type { Inaction } from "./components/Inaction";
   import InactionList from "./components/InactionList.svelte";
@@ -14,8 +14,8 @@
 
   async function fetchInactions() {
     inactions = [];
-    const query = '*[_type == "inaction"]{ _id, title, notes, priority }';
-    inactions = await sanity.fetch(query);
+    const res = await axios.get("/api/inactions");
+    if (res?.data?.length || 0 > 0) inactions = res.data;
   }
 
   onMount(fetchInactions);
