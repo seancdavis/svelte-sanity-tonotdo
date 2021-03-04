@@ -4,7 +4,8 @@
   "description": "A simple To Don't List app using Svelte for the front end and Sanity for the back end.",
   "main": "index.js",
   "scripts": {
-    "vercel": "vercel"
+    "api:dev": "vercel dev",
+    "svelte:dev": "npm run --prefix svelte dev"
   },
   "author": "Sean C Davis",
   "license": "MIT",
