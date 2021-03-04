@@ -30,8 +30,8 @@
       <strong>
         Please don't write anything offensive or abuse API requests.
       </strong>
-      If you see something offensive or aggressive, please delete it and replace
-      it with something fun, like
+      If you see something inappropriate, please delete it and replace it with something
+      fun, like
       <em>Not emptying the dishwasher ever again!</em>
     </small>
   </p>
