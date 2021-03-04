@@ -1,9 +1,11 @@
-# Sanity Clean Content Studio
+# Sanity Content Studio
 
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+This is a Sanity Content Studio instance that serves as the data source for the To Not Do list application in this monorepo.
 
-Now you can do the following things:
+If you are trying to clone this repo and run the studio from here, it likely won't work. My suggestion to you is to do the following:
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+1. Clone the repo.
+2. Save a copy of `schemas/schema.js`.
+3. Delete the `sanity` directory.
+4. Go through the process of [bootstrapping your own project](https://www.sanity.io/docs/getting-started-with-sanity-cli).
+5. Add the `schema.js` file to your bootstrapped project.
