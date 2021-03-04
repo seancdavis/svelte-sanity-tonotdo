@@ -24,6 +24,17 @@
 <main>
   <h1 class="main-heading">To Not Do</h1>
   <p class="intro">Here is a list of things I am not going to do.</p>
+  <p class="intro">
+    <small>
+      This is a friendly demo built for an article on Sanity's website.
+      <strong>
+        Please don't write anything offensive or abuse API requests.
+      </strong>
+      If you see something offensive or aggressive, please delete it and replace
+      it with something fun, like
+      <em>Not emptying the dishwasher ever again!</em>
+    </small>
+  </p>
 
   <InactionForm on:reloadInactions={fetchInactions} on:loading={setLoading} />
 
