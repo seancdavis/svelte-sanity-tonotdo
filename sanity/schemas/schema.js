@@ -11,6 +11,7 @@ export default createSchema({
       fields: [
         { title: "Title", name: "title", type: "string" },
         { title: "Notes", name: "notes", type: "text" },
+        { title: "Due Date", name: "dueDate", type: "date" },
       ],
     },
   ]),
